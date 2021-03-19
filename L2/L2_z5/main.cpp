@@ -16,7 +16,7 @@ std::string find_and_replace(std::string inp, std::string s1, std::string s2){
 int main()
 {
     std::string input="Ala ma kota, kot zjadł Ale!";
-    std::string output=find_and_replace(input,"kot","hefalump");
+    std::string output=find_and_replace(input,"kot","debil");
     std::cout<<output<<std::endl;
 
 
