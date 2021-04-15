@@ -34,8 +34,7 @@ int main()
     std::vector<std::string> lines = {"PO12345", "PO 12345", "PZ973ND", "WE20456"};
     std::smatch m;
     for(size_t i=0;i<lines.size();i++){
-        bool res = std::regex_match(lines, re);
-        if(res){
+        if(regex_match(lines[i],m ,re)){
             std::cout<<lines[i]<<std::endl;
         }
     }
