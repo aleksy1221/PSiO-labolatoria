@@ -4,24 +4,28 @@
 using namespace std;
 
 class CustomRectangleShape : public sf::RectangleShape{
-public:
-    CustomRectangleShape(const sf::Vector2 <double> &size, const sf::Vector2 <double> &position);
-
-
 protected:
-    sf::Vector2f size_(double a, double b);
-    sf::Vector2f position_(double x, double y);
+    sf::Vector2f size_(float a, float b);
+    sf::Vector2f position_(float x, float y);
+
+public:
+    CustomRectangleShape(sf::Vector2f size, sf::Vector2f position)
+        :RectangleShape(size), position_(position){}
+    sf::Vector2f positon() { return positon_; }
+
 
 };
-class Vehicle {
-protected:
-    Vehicle(const std::string &name, double max_speed)
-        : name_(name), max_speed_(max_speed) {}
+class Car : public Vehicle {
+public:
+    Car(const std::string &name, const std::string &propulsion_type,
+        double max_speed, bool has_abs)
+        : Vehicle(name, 4, propulsion_type, max_speed),
+          has_abs_(has_abs) {}
 
-    std::string name_;
-    int number_of_wheels_;
-    std::string propulsion_type_;
-    double max_speed_;
+    bool has_abs() { return has_abs_; }
+
+private:
+    bool has_abs_;
 };
 
 int main()
