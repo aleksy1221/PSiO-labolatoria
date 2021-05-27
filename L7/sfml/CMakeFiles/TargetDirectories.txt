@@ -1,0 +1,3 @@
+D:/GitHub/PSiO-labolatoria/L7/sfml/CMakeFiles/rebuild_cache.dir
+D:/GitHub/PSiO-labolatoria/L7/sfml/CMakeFiles/sfml.dir
+D:/GitHub/PSiO-labolatoria/L7/sfml/CMakeFiles/edit_cache.dir
