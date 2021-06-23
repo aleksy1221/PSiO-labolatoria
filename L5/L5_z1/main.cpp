@@ -13,7 +13,7 @@ int main()
     liczby.read_csv("wyniki.csv",',',5);
     std::vector<std::pair<int, int>> w;
     w=liczby.unique_items();
-
+    std::cout<<liczby;
     print(w);
     return 0;
 }

@@ -3,6 +3,7 @@
 #include <iostream>
 
 int main() {
+    srand(time(NULL));
     // create the window
     sf::RenderWindow window(sf::VideoMode(800,600), "My window");
     //window.setFramerateLimit(60);
@@ -47,22 +48,22 @@ int main() {
         std::cout<<1.0f/dt<<std::endl;
         if(rectangle_bounds.top+rectangle_bounds.height>600){
             rectangle_velocity_y*=-1;
-            srand(time(NULL));
+
             rectangle.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
         }
         if(rectangle_bounds.top<0){
             rectangle_velocity_y*=-1;
-            srand(time(NULL));
+
             rectangle.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
         }
         if(rectangle_bounds.left<0){
             rectangle_velocity_x*=-1;
-            srand(time(NULL));
+
             rectangle.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
         }
         if(rectangle_bounds.left+rectangle_bounds.width>800){
             rectangle_velocity_x*=-1;
-            srand(time(NULL));
+
             rectangle.setFillColor(sf::Color(rand() % 255, rand() % 255, rand() % 255));
         }
         rectangle.move(rectangle_velocity_x*dt,rectangle_velocity_y*dt);

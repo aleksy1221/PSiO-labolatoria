@@ -1,0 +1,3 @@
+D:/GitHub/PSiO-labolatoria/kolokwium/kolokwium/CMakeFiles/kolokwium.dir
+D:/GitHub/PSiO-labolatoria/kolokwium/kolokwium/CMakeFiles/edit_cache.dir
+D:/GitHub/PSiO-labolatoria/kolokwium/kolokwium/CMakeFiles/rebuild_cache.dir

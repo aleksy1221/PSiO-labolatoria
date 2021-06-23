@@ -1,0 +1,3 @@
+D:\Programy\QT\Tools\CMake_64\bin\cmake.exe -E rm -f CMakeFiles\kolokwium.dir/objects.a
+D:\MinGW\mingw64\bin\ar.exe cr CMakeFiles\kolokwium.dir/objects.a @CMakeFiles\kolokwium.dir\objects1.rsp
+D:\MinGW\mingw64\bin\g++.exe  -pedantic -g -Wl,--whole-archive CMakeFiles\kolokwium.dir/objects.a -Wl,--no-whole-archive -o kolokwium.exe -Wl,--out-implib,libkolokwium.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\kolokwium.dir\linklibs.rsp

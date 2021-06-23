@@ -13,6 +13,8 @@ SFML/Window.hpp
 -
 SFML/Graphics.hpp
 -
+cmath
+-
 
 D:/GitHub/PSiO-labolatoria/vcpkg/installed/x64-mingw-static/include/SFML/Config.hpp
 TargetConditionals.h
