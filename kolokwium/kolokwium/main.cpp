@@ -1,27 +1,67 @@
 #include <vector>
-#include <string>
 #include <iostream>
-#include <algorithm>
+#include <memory>
+#include <cmath>
 
-struct Product {
-    std::string name;
-    double mass; //masa towaru na magazynie w kg
-    double price; //cena jednostkowa w PLN
+const float PI = 3.1415f;
+
+class Figura
+{
+    std::string nazwa_;
+    float pole=pole_powierzchni();
+public:
+    Figura(const std::string& nazwa) : nazwa_(nazwa) {
+    }
+
+    virtual float pole_powierzchni()=0;
+
+    std::string nazwa() {
+        return nazwa_;
+    }
 };
 
-int main() {
-    std::vector<Product> products = {{"nuts", 2, 20},
-        {"potatoes", 100, 3},
-        {"butter", 50, 0},
-        {"a", 50, 3}};
-
-    auto above_threshold=[](const Product &products){
-            return (products.name.size()>=2&&products.mass>=2&&products.price>3);
-
-        };
-
-    if (std::all_of(products.begin(), products.end(), above_threshold)) {
-        std::cout << "All products are OK" << std::endl;
+class Prostokat : public Figura
+{
+    float x;
+    float y;
+public:
+    float polepowierzchni(){
+        return x*y;
     }
+};
+
+class Kolo : public Figura
+{
+public:
+    float r;
+public:
+    float polepowierzchni(){
+        return PI*pow(r,2);
+    }
+};
+
+std::vector<std::unique_ptr<Figura>> utworz_figury() {
+    std::vector<std::unique_ptr<Figura>> figury;
+    // ...
+    return figury;
+
+}
+
+void drukuj(const std::vector<std::unique_ptr<Figura>>& figury) {
+    for (const auto& figura : figury)
+    {
+        std::cout << figura->nazwa() << ": " << figura->pole_powierzchni() << '\n';
+    }
+
+}
+
+int main() {
+
+    std::vector<std::unique_ptr<Figura>> figury = utworz_figury();
+    drukuj(figury);
+    Kolo c;
+
+
     return 0;
+
 }

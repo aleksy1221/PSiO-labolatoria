@@ -6,5 +6,5 @@ CXX_DEFINES = -DSFML_STATIC
 
 CXX_INCLUDES = @CMakeFiles/kolokwium.dir/includes_CXX.rsp
 
-CXX_FLAGS =  -pedantic -g -std=c++11
+CXX_FLAGS =  -pedantic -g -std=c++1z
 

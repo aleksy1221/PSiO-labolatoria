@@ -56,7 +56,7 @@
 					"fragment" : " -pedantic -g"
 				},
 				{
-					"fragment" : "-std=c++11"
+					"fragment" : "-std=c++1z"
 				}
 			],
 			"defines" : 
@@ -81,7 +81,7 @@
 				[
 					2
 				],
-				"standard" : "11"
+				"standard" : "17"
 			},
 			"sourceIndexes" : 
 			[

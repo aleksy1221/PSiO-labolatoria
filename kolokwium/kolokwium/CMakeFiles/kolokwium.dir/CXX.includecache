@@ -9,10 +9,10 @@
 D:/GitHub/PSiO-labolatoria/kolokwium/kolokwium/main.cpp
 vector
 -
-string
--
 iostream
 -
-algorithm
+memory
+-
+cmath
 -
 
